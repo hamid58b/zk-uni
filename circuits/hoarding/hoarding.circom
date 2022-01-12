@@ -18,15 +18,16 @@ Constraints:
 */
 
 template Main() {
-    //old coordinates
+    
+    //previous location
     signal input x;
     signal input y;
     
-    //new coordinates
+    //new location
     signal input new_x;
     signal input new_y;
     
-    //constrain maximum movement distance to 16 (d = 16)
+    //constrain maximum movement distance from prev location to new location to 16 (d = 16)
     signal input d;
     
 
@@ -44,16 +45,16 @@ template Main() {
     signal ySq;
     signal dSq;
     
-    signal xDiff;
-    signal yDiff;
+    signal dif_x;
+    signal dif_y;
 
     dSq <== d * d; //distance
     
-    xDiff <== new_x - x;
-    xSq <== xDiff * xDiff;
+    dif_x <== new_x - x;
+    xSq <== dif_x * dif_x;
     
-    yDiff <== new_y - y;
-    ySq <== yDiff * yDiff;
+    dif_y <== new_y - y;
+    ySq <== dif_y * dif_y;
     
     less.in[0] <== xSq + ySq;
     less.in[1] <== dSq;
@@ -67,4 +68,4 @@ template Main() {
 }
 
 
-component main {public [r]} = Main();
+component main {public [d]} = Main();

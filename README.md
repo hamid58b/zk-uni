@@ -3,6 +3,7 @@
 # Demo video 
 - smart contract: [DarkForest.sol](contracts/DarkForest.sol)
 - smart contract: [Verifier.sol](contracts/verifier.sol)
+- circom file [hoarding.circom](circuits/hoarding/hoarding.sym)
 
 
 
