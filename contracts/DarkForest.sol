@@ -65,6 +65,7 @@ contract DarkForest {
         uint[2][2] memory b,
         uint[2] memory c,
         uint[3] memory input,
+        
         address verifierAddress,
         uint newLocation,
         uint prevLocation,
@@ -89,13 +90,14 @@ contract DarkForest {
         //TODO: require(planetResouces < newPlanet.planetType, " check for larger resouces withdrawals");
 
         if(oldPlanet.owner == msg.sender){
+            
             if(newLocation == prevLocation){
                 // add to the current resouces player has
                 oldPlanet.pendings  // pending resouces+= planetResouces;
             }
+            
             else{
                 resources[msg.sender] += oldPlanet.pendings; // pending resouces
-                oldPlanet.pendings  // pending resouces= 0;
                 occupied[prevLocation] = false;
             }
         }
@@ -105,6 +107,7 @@ contract DarkForest {
 
         // set the current location flag as occupied 
         occupied[newLocation] = true;
-        positions [newLocation] = block.timestamp;
+
+
     }
 }
