@@ -1,11 +1,9 @@
 
 
 # Demo video 
-- compiled the circom file
-- showed the smart contract
+- smart contract: [DarkForest.sol](contracts/DarkForest.sol)
+- smart contract: [Verifier.sol](contracts/verifier.sol)
 
-
-https://www.youtube.com/watch?v=J3WL4geUxdk
 
 
 # Basic Sample Hardhat Project
