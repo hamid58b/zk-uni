@@ -3,7 +3,7 @@
 # Smart contracts and circom files
 - smart contract: [DarkForest.sol](contracts/DarkForest.sol)
 - smart contract: [Verifier.sol](contracts/verifier.sol)
-- circom file [hoarding.circom](circuits/hoarding/hoarding.sym)
+- circom file [hoarding.circom](circuits/hoarding/hoarding.circom)
 
 
 
