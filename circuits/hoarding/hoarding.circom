@@ -30,16 +30,7 @@ template Main() {
     //constrain maximum movement distance from prev location to new location to 16 (d = 16)
     signal input d;
     
-
-    /* check MiMCSponge(x,y) = pub */
-    component mimc = MiMCSponge(2, 220, 1);
-
-    mimc.ins[0] <== x;
-    mimc.ins[1] <== y;
-    mimc.k <== 0;
-
-    h <== mimc.outs[0];
-
+    
     //check if max move distance is 16
     signal xSq;
     signal ySq;
@@ -64,6 +55,15 @@ template Main() {
     //check if the distance from (0,0) is less than 128
     //TODO
 
+    /* check MiMCSponge(x,y) = pub */
+    component mimc = MiMCSponge(2, 220, 1);
+
+    mimc.ins[0] <== x;
+    mimc.ins[1] <== y;
+    mimc.k <== 0;
+
+    h <== mimc.outs[0];
+    
     
 }
 

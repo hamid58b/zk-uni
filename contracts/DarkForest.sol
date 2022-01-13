@@ -88,19 +88,6 @@ contract DarkForest {
         Planet memory oldPlanet = planets[prevLocation];
 
         //TODO: require(planetResouces < newPlanet.planetType, " check for larger resouces withdrawals");
-
-        if(oldPlanet.owner == msg.sender){
-            
-            if(newLocation == prevLocation){
-                // add to the current resouces player has
-                oldPlanet.pendings  // pending resouces+= planetResouces;
-            }
-            
-            else{
-                resources[msg.sender] += oldPlanet.pendings; // pending resouces
-                occupied[prevLocation] = false;
-            }
-        }
         
         //store the current timestamp for future use
         recentMoves[msg.sender] = block.timestamp;
